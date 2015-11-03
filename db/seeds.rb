@@ -10,3 +10,20 @@ require_relative "models/tenant"
 # with the wdi database and have defined the Student Class as an
 # ActiveRecord::Base class.
 binding.pry
+
+Apartment.destroy_all
+Tenant.destroy_all
+
+Apartment.create([{address: 123 Main St, monthly_rent: 700, sqft: 700, num_beds:2, num_baths: 1, renters: 2 },
+  {address: 123 Main St, monthly_rent: 600, sqft: 500, num_beds: 1, num_baths: 1, renters: 1},
+  {address: 123 Main St, monthly_rent: 500, sqft: 400, num_beds: 1, num_baths: 1, renters: 1}])
+
+Tenant.create([{name: Kelly, age: 24, gender: 'f' apt_id: 1},
+  {name: Domo, age: 26, gender: 'm' apt_id: 2},
+  {name: Dimtri, age: 26, gender: 'm' apt_id: 1},
+  {name: Dima, age: 26, gender: 'm' apt_id: 2},
+  {name: Dumirtu, age: 26, gender: 'm' apt_id: 3},
+  {name: Mitea, age: 21, gender: 'f' },
+  {name: Rachel, age: 21, gender: 'f'},
+  {name: Brittney, age: 21, gender: 'f'},
+  {name: Sarah, age: 21, gender: 'f'}, ])
