@@ -35,3 +35,17 @@ Tenant.create(
   {name: 'Brittney', age: 21, gender: 'f'},
   {name: 'Sarah', age: 21, gender: 'f'}
   ])
+
+
+all_tenants = Tenant.all
+
+Apartment.first.tenants
+
+first_apt = Apartment.first
+first_apt.monthly_rent = 840
+
+first_apt.save
+
+Tenant.last.update(age: 25)
+
+Tenant.all[4].destroy
